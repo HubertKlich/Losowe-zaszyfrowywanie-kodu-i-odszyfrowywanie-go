@@ -1,0 +1,169 @@
+//POP 2017-12-12 projekt 1 Klich Hubert AIR 2 171801 DEV-C++ 5.11 TDM-GCC 4.9.2 64-bit Release
+#include<iostream>
+#include <cstdlib>
+#include <ctime>
+#include<vector>
+#include <algorithm>
+#include <stdlib.h>
+#include <fstream>
+using namespace std;
+string tekst;
+string tekst_zmiana;
+string nowy;
+vector<int> kod;
+int main()
+{	srand(time(NULL));
+	
+	getline( cin, tekst );
+
+	string pom[tekst.length()];
+	kod.push_back(97);
+	kod.push_back(98);
+	kod.push_back(99);
+	kod.push_back(100);
+	kod.push_back(101);
+	kod.push_back(102);
+	kod.push_back(103);
+	kod.push_back(104);
+	kod.push_back(105);
+	kod.push_back(106);
+	kod.push_back(107);
+	kod.push_back(108);
+	kod.push_back(109);
+	kod.push_back(110);
+	kod.push_back(111);
+	kod.push_back(112);
+	kod.push_back(113);
+	kod.push_back(114);
+	kod.push_back(115);
+	kod.push_back(116);
+	kod.push_back(117);
+	kod.push_back(118);
+	kod.push_back(119);
+	kod.push_back(120);
+	kod.push_back(121);
+	kod.push_back(122);
+	kod.push_back(65);
+	kod.push_back(66);
+	kod.push_back(67);
+	kod.push_back(68);
+	kod.push_back(69);
+	kod.push_back(70);
+	kod.push_back(71);
+	kod.push_back(72);
+	kod.push_back(73);
+	kod.push_back(74);
+	kod.push_back(75);
+	kod.push_back(76);
+	kod.push_back(77);
+	kod.push_back(78);
+	kod.push_back(79);
+	kod.push_back(80);
+	kod.push_back(81);
+	kod.push_back(82);
+	kod.push_back(83);
+	kod.push_back(84);
+	kod.push_back(85);
+	kod.push_back(86);
+	kod.push_back(87);
+	kod.push_back(88);
+	kod.push_back(89);
+	kod.push_back(90);
+	tekst_zmiana=tekst;
+	int z;
+	char y;
+	z=rand()%kod.size();
+			tekst_zmiana[0]=kod[z];
+kod.erase(kod.begin()+z);
+				
+	for(int i=0;i<tekst.length();i++)
+	{
+		
+	
+	
+	
+	
+		for(int j=65;j<123;j++)
+		{
+		
+		for(int k=0;k<i;k++)
+		{
+		if(tekst[i]==tekst[k])
+		{tekst_zmiana[i]=tekst_zmiana[k];
+		break;
+		}
+		else if(tekst[i]==(char)j )
+		{
+	//	cout<<(char)kod[0];
+	//	cout<<kod.size()<<endl;
+		z=rand()%kod.size();
+		tekst_zmiana[i]=kod[z];
+	//	cout<<tekst_zmiana[i];
+		kod.erase(kod.begin()+z);
+		
+		break;
+		}
+		
+		
+		
+		}
+		
+		
+		}
+		
+}
+		int r=0;
+		cout<<"Oryginal"<<" "<<"Zmiana"<<endl;
+		cout<<tekst[0]<<"    =    "<<tekst_zmiana[0]<<endl;
+		pom[0]=tekst[0];
+	for(int i=0;i<tekst.length();i++)
+	{
+		
+		for(int k=0;k<i;k++)
+		{
+		
+	if(tekst[i]==tekst[k])
+	{r=k;
+	}		
+}
+		if(tekst[i]!=tekst[r] and tekst[i]!=(char)32)
+		{cout<<tekst[i]<<"    =    "<<tekst_zmiana[i]<<endl;
+		pom[i+1]=tekst[i];
+		r=0;
+		}
+		
+				
+	}	
+	
+	
+	
+	
+	
+	cout<<endl<<tekst_zmiana<<endl;
+	
+fstream	plik;
+plik.open( "plik.txt", std::ios::in | std::ios::out );	
+
+	for(int i=0;i<tekst.length();i++)	
+{
+plik>>tekst_zmiana[i];
+if(pom[i]!=" ")
+plik>>pom[tekst.length()-i-1];
+		
+			
+				
+			
+				
+}
+
+plik.close();
+//rozkodowanie
+for(int i=0;i<tekst.length();i++)
+{
+	
+}
+
+
+
+}
+	
